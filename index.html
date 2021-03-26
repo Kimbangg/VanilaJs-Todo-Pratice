@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>이벤트 - TODOS</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- def는 html, css, js를 병렬로 받아오고 html,css 렌더링이 마무리 되면
+    js를 받아 오기에 가장 효율적인 방법이라고 생각한다. -->
+    <script def src="js/app.js"></script>
+</head>
+<body>
+    <!-- todo-app의 기능들을 묶어 놓은 공간이라서 section을 사용 -->
+    <section class="todoapp">
+        <header>
+            <h1>TODOS</h1>
+            <input
+              id="new-todo-title"
+              class="new-todo"
+              placeholder="할일을 추가해주세요"
+              autofocus
+            />
+        </header>
+        <main>
+            <input class="toggle-all" type="checkbox"/>
+            <ul id="todo-list" class="todo-list"></ul>
+            <div class="count-container">
+                <span class="todo-count">총<strong>0</strong>개</span>
+                <ul class="filters">
+                    <li>
+                        <a class="all selected" href="#/">전체보기</a>
+                    </li>
+                    <li>
+                        <a class="active" href="#/active">해야 할 일</a>
+                    </li>
+                    <li>
+                        <a class="completed" href="#/completed">완료한 일</a>
+                    </li>
+                </ul>
+            </div>
+        </main>
+    </section>
+</body>
+</html>
